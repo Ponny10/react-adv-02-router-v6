@@ -6,3 +6,5 @@ export const LazyOne = () => {
     </div>
   )
 }
+
+export default LazyOne;

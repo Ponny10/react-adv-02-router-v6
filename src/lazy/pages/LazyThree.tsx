@@ -6,3 +6,5 @@ export const LazyThree = () => {
     </div>
   )
 }
+
+export default LazyThree;

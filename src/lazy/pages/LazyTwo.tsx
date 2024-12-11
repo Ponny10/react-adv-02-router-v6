@@ -6,3 +6,5 @@ export const LazyTwo = () => {
     </div>
   )
 }
+
+export default LazyTwo;
