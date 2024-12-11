@@ -35,7 +35,7 @@ export const Navigation = () => {
             {routes.map(({ Component, path }, index: number) => (
               <Route key={index} path={path} element={<Component />} />
             ))}
-            <Route path="/*" element={<Navigate to={"/lazyOne"} replace />} />
+            <Route path="/*" element={<Navigate to={routes[0].to} replace />} />
           </Routes>
         </div>
       </BrowserRouter>

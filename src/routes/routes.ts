@@ -1,4 +1,5 @@
 import { lazy, LazyExoticComponent } from 'react';
+import NoLazyLayout from '../lazy/pages/NoLazyLoad';
 
 // * Pasos para aplicar el LazyLoad en React
 
@@ -14,27 +15,19 @@ interface Routes {
 };
 
 // * 03.- Importar independientemente los módulos mediante lazy de react
-const LazyOne = lazy(() => import('../lazy/pages/LazyOne'));
-const LazyTwo = lazy(() => import('../lazy/pages/LazyTwo'));
-const LazyThree = lazy(() => import('../lazy/pages/LazyThree'));
+const LazyLayout = lazy(() => import('../lazy/layout/LazyLayout'));
 
 export const routes: Routes[] =  [
     {
-        Component: LazyOne,
-        name: 'LazyOne',
-        path: 'lazyOne',
-        to: '/lazyOne',
+        Component: LazyLayout,
+        name: 'LazyYout',
+        path: '/lazyYout/*',
+        to: '/lazyYout/',
     },
     {
-        Component: LazyTwo,
-        name: 'LazyTwo',
-        path: 'lazyTwo',
-        to: '/lazyTwo',
-    },
-    {
-        Component: LazyThree,
-        name: 'LazyThree',
-        path: 'lazyThree',
-        to: '/lazyThree',
+        Component: NoLazyLayout,
+        name: 'NoLazyLayout',
+        path: 'noLazyLayout',
+        to: '/noLazyLayout',
     },
 ];
